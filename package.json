@@ -1,0 +1,31 @@
+{
+  "name": "oldNewTemplate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "bemto.pug": "^2.1.0",
+    "browser-sync": "^2.26.3",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-stylus": "^2.7.0",
+    "gulp-tinypng": "^1.0.2",
+    "gulp-uglify": "^3.0.1",
+    "gulp-useref": "^3.1.6",
+    "jquery": "^3.3.1",
+    "jquery-form-styler": "^2.0.2",
+    "magnific-popup": "^1.1.0",
+    "rimraf": "^2.6.2",
+    "slick-carousel": "^1.8.1"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.0"
+  }
+}

@@ -1,0 +1,41 @@
+include ../../node_modules/bemto.pug/bemto
+
+- set_bemto_settings({modifier: '--'})
+
+include mixins
+
+doctype html
+html(lang="ru")
+	head
+		block title
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1")
+		script window.addEventListener('load',function(){var preload=document.getElementById('page-preloader');setTimeout(function(){preload.style.display='none'},600)})
+		link(rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon")
+		link(rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png")
+		link(rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png")
+		link(rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png")
+		style
+			include ../css/header.css
+	body
+		// preloader
+		+b#page-preloader
+			+e.SPAN.spinner
+		block header
+		block content
+		block footer
+
+		// build:css css/main.min.css
+		link(rel="stylesheet", href="css/main.css")
+		// endbuild		
+		// build:js js/jquery.min.js
+		script(src="js/jquery.min.js")
+		// endbuild
+		// build:js js/vendor.min.js
+		script(src="js/vendor.min.js")
+		// endbuild
+		// build:js js/main.min.js
+		script(src="js/main.js")
+		// endbuild		
+		script(src="js/pixelScreen.js")
