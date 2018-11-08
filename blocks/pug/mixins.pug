@@ -1,0 +1,12 @@
+mixin button(link, title, dataTarget = 'anchor')
+	+b.g-btn
+		+e.A(href=link, data-target=dataTarget).link= title
+
+mixin scrollDown(count = 6, link = '')
+	+b.scroll-down
+		- for (var i = 0; i < count; i++)
+			+e.SPAN.item
+		+e.A(href=link, class='link animated infinite bounce delay-2s', data-target='anchor')
+
+mixin sectionTitle(title)
+	h4.section-title= title

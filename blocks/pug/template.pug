@@ -22,9 +22,10 @@ html(lang="ru")
 		// preloader
 		+b#page-preloader
 			+e.SPAN.spinner
-		block header
-		block content
-		block footer
+		.wrapper
+			block header
+			block content
+			block footer
 
 		// build:css css/main.min.css
 		link(rel="stylesheet", href="css/main.css")

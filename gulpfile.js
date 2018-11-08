@@ -45,7 +45,7 @@ gulp.task('stylus-header', function() {
 		'include css': true
 	}))
 	.pipe(prefix({
-        browsers: ['last 2 versions'],
+        browsers: ['last 12 versions'],
         cascade: false
     }))
     .pipe(cleancss())
@@ -66,7 +66,7 @@ gulp.task('stylus-main', function() {
 		'include css': true
 	}))
 	.pipe(prefix({
-        browsers: ['last 2 versions'],
+        browsers: ['last 12 versions'],
         cascade: false
     }))
     .on("error", notify.onError(function (error) {

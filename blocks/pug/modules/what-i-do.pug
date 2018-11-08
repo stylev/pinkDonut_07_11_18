@@ -1,0 +1,22 @@
+- var sectionTitleName = 'what i do';
+- var sectionTitleText = 'Fingerstache green juice semiotics quinoa, truffaut letterpress wolf photo booth ugh biodiesel mumblecore brunch. Meh austin vinyl banh mi, gluten-free chillwave scenester kombucha street art. Before they sold out lumbersexual chillwave, cold-pressed mumblecore beard pickled letterpress normcore crucifix.';
+- var sectionItemsImg = ['img/Headphones.png', 'img/Screen.png', 'img/Camera.png'];
+- var sectionItemsTitle = ['ultricies', 'porttitor', 'Curabitur'];
+- var sectionItemsText = ['Four dollar toast messenger bag green juice, organic cliche tofu synth small batch locavore austin. Squid mlkshk authe ntic pinterest, pour-over gastropub XOXO seitan sartorial humblebrag.', 'Four dollar toast messenger bag green juice, organic cliche tofu synth small batch locavore austin. Squid mlkshk authe ntic pinterest, pour-over gastropub XOXO seitan sartorial humblebrag.', 'Four dollar toast messenger bag green juice, organic cliche tofu synth small batch locavore austin. Squid mlkshk authe ntic pinterest, pour-over gastropub XOXO seitan sartorial humblebrag.'];
+section#what-i-do
+	.container
+		.what-i-do-section-title
+			+b.section-title-block
+				+e.left
+					+sectionTitle(sectionTitleName)
+				+e.right
+					p= sectionTitleText
+		+b.setion-items-block
+			each obj, i in sectionItemsImg
+				+e.item
+					+e.IMG(src=obj, alt='').img
+					+scrollDown(2)
+					+e.SPAN.title= sectionItemsTitle[i]
+					+e.SPAN.text= sectionItemsText[i]
+
+	+scrollDown(6, '#my-works')

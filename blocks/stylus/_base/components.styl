@@ -63,3 +63,254 @@ input:-ms-input-placeholder
 	border-radius 4px
 ::-webkit-scrollbar-thumb:hover
 	background rgba(255,255,255,.75)
+	
+/* Menu */
+@media only screen and (max-width 1199px)
+	.header-menu
+		
+		&.desktop
+			text-align center
+
+@media only screen and (min-width 1101px)
+	.toggle-menu
+		display none
+		
+	.header-menu
+		
+		&.desktop
+						
+			.header-menu
+				
+				&__item
+					display inline-block
+						
+				&__link
+					padding 18px 24px 22px
+					border-radius 19px
+					transition all .3s
+					display block
+					
+					&:hover,
+					&.active
+						background-color blackColor
+						transition all .3s
+						color goldColor
+
+
+@media only screen and (max-width 1100px)
+	.header
+		padding 30px 0 0 30px !important
+		
+	.toggle-menu
+		height 40px
+		width 40px
+		border-radius 5px
+		background-color blackColor
+		position relative
+		cursor pointer
+		z-index 1
+		
+		&__item
+			display block
+			position absolute
+			left 10%
+			width 80%
+			height 4px
+			border-radius 2px
+			background-color goldColor
+			
+			&--top
+				top 8px
+				transition all .3s
+			
+			&--middle
+				top 18px
+				transition all .3s
+				opacity 1
+			
+			&--bottom
+				top 28px
+				transition all .3s
+		
+		&.active
+			
+			.toggle-menu
+				
+				&__item
+					
+					&--top
+						top 18px
+						transition all .3s
+						transform rotate(-45deg)
+					
+					&--middle
+						transition all .3s
+						opacity 0
+					
+					&--bottom
+						top 18px
+						transition all .3s
+						transform rotate(45deg)
+						
+
+	.header-menu
+		
+		&.mobile
+			position fixed
+			top 0
+			left 0
+			right 0
+			bottom 0
+			background-color blackColor
+			opacity .9
+			display none
+			transition all .3s
+			text-align center
+			
+			.header-menu
+				
+				&__list
+					width 300px
+					position absolute
+					top 50%
+					left 50%
+					transform translate(-50%, -50%)
+				
+				&__item
+					margin-bottom 12px
+					
+					&:last-child
+						margin-bottom 0
+						
+				&__link
+					color goldColor
+					transition all .3s
+					
+					&:hover
+						transition all .3s
+						color whiteColor
+					
+			
+		&.active
+			display block
+			transition all .3s
+			
+
+/* Button */
+.g-btn
+	max-width 325px
+	width 100%
+	position relative
+	margin 0 auto
+	height 50px
+	
+	&::before
+		content ''
+		position absolute
+		top 17px
+		left 0
+		width 95%
+		height 5px
+		background-color blackColor
+	
+	&::after
+		content ''
+		position absolute
+		bottom 17px
+		right 0
+		width 95%
+		height 5px
+		background-color blackColor
+	
+	&__link
+		position absolute
+		top 0
+		left 50%
+		transform translateX(-50%)
+		height 50px
+		width 49%
+		border-radius 19px
+		border solid 4px blackColor
+		background-color goldenrodColor
+		display block
+		margin 0 auto
+		line-height 40px
+		transition all .3s
+		z-index 1
+		
+		&:hover
+			background-color whiteColor
+			transition all .3s
+			
+
+/* Scroll down */
+.scroll-down
+	width 5px
+	position absolute
+	top 7px
+	left 50%
+	transform translateX(-50%)
+	
+	&__item
+		display block
+		width 5px
+		height 22px
+		background-color blackColor
+		margin-bottom 15px
+		
+		&:last-child
+			margin-bottom 0
+			
+	&__link
+		width 31px
+		height 58px
+		border-radius 15.5px
+		border solid 4px blackColor
+		position absolute
+		bottom 34px
+		left -13px
+		
+
+/* Section title */
+.section-title
+	position relative
+	font-size 76.5px
+	display inline-block
+	
+	&::before
+		content ''
+		position absolute
+		bottom -30px
+		left 0
+		height 5px
+		width 95%
+		background-color blackColor
+	
+	&::after
+		content ''
+		position absolute
+		bottom -40px
+		right 0
+		height 5px
+		width 95%
+		background-color blackColor
+		
+
+/* Go top */
+#go-top
+	position fixed
+	bottom 25px
+	right 10px
+	cursor pointer
+	display none
+	width 50px
+	height 50px
+	background goldenrodColor url('../img/chevron-arrow-up.png') no-repeat center
+	background-size 80%
+	border-radius 50%
+	transition all .3s
+	border 4px solid blackColor
+		
+	&:hover
+		background-color whiteColor
+		transition all .3s

@@ -1,1 +1,28 @@
-h1 Some site
+- var menuLink = ['#home', '#what-i-do', '#my-works', '#about', '#contact'];
+- var menuTitle = ['Home', 'What i do', 'My works', 'About', 'Contact'];
+- var toggleClass = ['--top', '--middle', '--bottom'];
+- var topSliderBg = ['img/main-slider.jpg', 'img/main-slider.jpg', 'img/main-slider.jpg'];
+- var topSliderText = ['Tacos cardigan truffaut Quanted!', 'Tacos cardigan truffaut Quanted!', 'Tacos cardigan truffaut Quanted!'];
+- var topSliderImg = ['img/glasses.png', 'img/glasses.png', 'img/glasses.png'];
+- var topSliderLink = ['#contact', '#contact', '#contact'];
+
+section#home
+	header.header
+		.container
+			nav.header-nav
+				+b.toggle-menu
+					- for (var i = 0; i < 3; i++)
+						+e.SPAN(class='item' + toggleClass[i])
+				+b.header-menu.mobile.desktop
+					+e.UL.list
+						- for (var i = 0; i < menuLink.length; i++)
+							+e.LI.item
+								+e.A(href=menuLink[i], class={'link active': i === 0, 'link': i > 0}, data-target='anchor')= menuTitle[i]
+	+b.js-top-slider
+		- for (var i = 0; i < topSliderText.length; i++)
+			+e.item(style='background: url(' + topSliderBg[i] + ') no-repeat center')
+				+b.slider-content
+					+e.H3.text= topSliderText[i]
+					+e.IMG(src=topSliderImg[i], alt='').img
+					+button(topSliderLink[i], 'see more')
+	+scrollDown(6, '#what-i-do')
